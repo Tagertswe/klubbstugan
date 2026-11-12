@@ -1,0 +1,14 @@
+{
+  // Node-side code outside Nuxt: the seed and the command-line scripts (run with tsx).
+  "compilerOptions": {
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "target": "es2023",
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "skipLibCheck": true,
+    "noEmit": true,
+    "types": ["node"]
+  },
+  "include": ["scripts/**/*.ts", "prisma/**/*.ts", "prisma.config.ts"]
+}

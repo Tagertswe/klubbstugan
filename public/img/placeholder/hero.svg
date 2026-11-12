@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice">
+  <!-- Neutral placeholder: a running track in the club colours. No people (CLAUDE.md, content packs). -->
+  <rect width="1600" height="1000" fill="#3B1A5A"/>
+  <g fill="none" stroke-width="56">
+    <path d="M-200 1100 C 300 700, 700 520, 1800 420" stroke="#5B2A86"/>
+    <path d="M-200 1220 C 320 800, 740 620, 1800 540" stroke="#EE8915"/>
+    <path d="M-200 1340 C 340 900, 780 720, 1800 660" stroke="#221E1F"/>
+  </g>
+  <g fill="none" stroke="#FFFFFF" stroke-opacity=".55" stroke-width="6" stroke-dasharray="40 30">
+    <path d="M-200 1160 C 310 750, 720 570, 1800 480"/>
+    <path d="M-200 1280 C 330 850, 760 670, 1800 600"/>
+  </g>
+  <circle cx="1240" cy="220" r="110" fill="#EE8915" fill-opacity=".9"/>
+</svg>

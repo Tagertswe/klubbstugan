@@ -1,0 +1,22 @@
+{
+  "format": "klubbstugan-content",
+  "version": 1,
+  "name": "CI smoke test",
+  "settings": {
+    "theme": "fart",
+    "hero.image": "media/hero.png",
+    "hero.imageAlt": "Orange testbild"
+  },
+  "newsCategories": [{ "slug": "traning", "name": "Träning" }],
+  "news": [
+    {
+      "slug": "importerad-nyhet",
+      "title": "Importerad nyhet",
+      "excerpt": "Kommer från ett innehållspaket.",
+      "body": "Text.",
+      "category": "traning",
+      "publishedAt": "2026-11-01T09:00:00Z"
+    }
+  ],
+  "recurring": [{ "slug": "intervaller", "title": "Intervallträning", "weekday": 2, "time": "18:00", "place": "Klubblokalen" }]
+}

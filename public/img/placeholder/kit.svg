@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Neutral placeholder: the kit's black, orange and purple stripes. No people. -->
+  <rect width="1280" height="400" fill="#221E1F"/>
+  <path d="M-40 400 L 520 -20 L 640 -20 L 80 400 Z" fill="#EE8915"/>
+  <path d="M120 400 L 680 -20 L 740 -20 L 180 400 Z" fill="#5B2A86"/>
+  <path d="M700 400 L 1260 -20 L 1380 -20 L 820 400 Z" fill="#EE8915" fill-opacity=".85"/>
+  <path d="M860 400 L 1420 -20 L 1480 -20 L 920 400 Z" fill="#5B2A86" fill-opacity=".85"/>
+</svg>

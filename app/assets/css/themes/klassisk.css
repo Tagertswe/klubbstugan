@@ -1,0 +1,41 @@
+/* Klassisk: light and calm, closest to today's site (spec §5.8.1). */
+:root,
+:root[data-theme="klassisk"] {
+  --c-bg: #F4F2F0;
+  --c-surface: #FFFFFF;
+  --c-text: #221E1F;
+  --c-muted: #5F5754;
+  --c-line: #E4E0DC;
+  --c-link: #A85400;
+  --c-accent: #EE8915;
+  --c-on-accent: #221E1F;
+  --c-brand-2: #5B2A86;
+  --c-on-brand-2: #FFFFFF;
+  --c-header-bg: #221E1F;
+  --c-header-fg: #FFFFFF;
+  --c-header-muted: #E7E2DF;
+  --c-hero-bg: #FFFFFF;
+  --c-hero-fg: #221E1F;
+  --c-hero-muted: #5F5754;
+  --c-band-bg: #221E1F;
+  --c-band-fg: #FFFFFF;
+  --c-label-bg: #EE8915;
+  --c-label-fg: #221E1F;
+  --c-footer-bg: #221E1F;
+  --c-footer-fg: #E7E2DF;
+
+  --font-body: var(--font-inter);
+  --font-display: var(--font-inter);
+  --display-case: none;
+  --display-weight: 800;
+  --display-tracking: -0.02em;
+
+  --radius-card: 14px;
+  --radius-button: 10px;
+  --radius-label: 999px;
+  --skew: 0deg;
+  --tilt: 0deg;
+  --edge-start: 0px;
+  --edge-end: 0px;
+  --card-shadow: 0 1px 2px rgb(34 30 31 / 0.06);
+}

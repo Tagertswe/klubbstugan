@@ -1,0 +1,138 @@
+// Klubbstugan data model. Phase 1 covers the public site: news, events,
+// training, FAQ, sponsors and site settings. Never add a field for personal
+// identity numbers (CLAUDE.md, Boundaries).
+
+generator client {
+  provider     = "prisma-client"
+  output       = "../server/generated/prisma"
+  moduleFormat = "esm"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum Visibility {
+  PUBLIC
+  MEMBERS
+}
+
+enum MemberStatus {
+  INVITED
+  ACTIVE
+  ENDED
+}
+
+enum EventType {
+  TRAINING
+  RACE
+  CLUB
+  OTHER
+}
+
+/// Site-wide values such as the default theme.
+model SiteSetting {
+  key       String   @id
+  value     String
+  updatedAt DateTime @updatedAt
+}
+
+model Member {
+  id              String       @id @default(cuid())
+  name            String
+  email           String       @unique
+  memberType      String       @default("Medlem")
+  status          MemberStatus @default(INVITED)
+  /// klassisk | fart | klubbdrakt, or null for the site default
+  themePreference String?
+  createdAt       DateTime     @default(now())
+  updatedAt       DateTime     @updatedAt
+}
+
+model NewsCategory {
+  id                String     @id @default(cuid())
+  slug              String     @unique
+  name              String
+  sortOrder         Int        @default(0)
+  defaultVisibility Visibility @default(PUBLIC)
+  items             NewsItem[]
+}
+
+model NewsItem {
+  id          String       @id @default(cuid())
+  slug        String       @unique
+  title       String
+  excerpt     String
+  /// Plain text; blank lines separate paragraphs. Rich text comes with the editor.
+  body        String
+  imageUrl    String?
+  imageAlt    String?
+  visibility  Visibility   @default(PUBLIC)
+  authorName  String?
+  publishedAt DateTime?
+  unpublishAt DateTime?
+  pinnedUntil DateTime?
+  categoryId  String
+  category    NewsCategory @relation(fields: [categoryId], references: [id])
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+
+  @@index([publishedAt])
+}
+
+model Event {
+  id         String     @id @default(cuid())
+  slug       String     @unique
+  title      String
+  type       EventType
+  startsAt   DateTime
+  endsAt     DateTime?
+  place      String
+  summary    String?
+  imageUrl   String?
+  imageAlt   String?
+  url        String?
+  visibility Visibility @default(PUBLIC)
+
+  @@index([startsAt])
+}
+
+model TrainingGroup {
+  id          String        @id @default(cuid())
+  slug        String        @unique
+  name        String
+  description String
+  /// ink | orange | purple: the group's colour in every theme
+  accent      String
+  meetTime    String?
+  sortOrder   Int           @default(0)
+  sessions    TermPlanRow[]
+}
+
+model TermPlanRow {
+  id      String        @id @default(cuid())
+  date    DateTime      @db.Date
+  workout String
+  note    String?
+  groupId String
+  group   TrainingGroup @relation(fields: [groupId], references: [id])
+
+  @@unique([date, groupId])
+}
+
+model FaqItem {
+  id         String  @id @default(cuid())
+  question   String
+  answer     String
+  topic      String
+  sortOrder  Int     @default(0)
+  showOnHome Boolean @default(false)
+}
+
+model Sponsor {
+  id        String  @id @default(cuid())
+  name      String
+  logoUrl   String
+  url       String?
+  sortOrder Int     @default(0)
+}

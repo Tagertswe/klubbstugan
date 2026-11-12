@@ -1,0 +1,41 @@
+/* Klubbdräkt: photo first, condensed headlines, purple bands and the kit's
+   orange and purple stripes (mockup v3). */
+:root[data-theme="klubbdrakt"] {
+  --c-bg: #FFFFFF;
+  --c-surface: #FFFFFF;
+  --c-text: #221E1F;
+  --c-muted: #5F5754;
+  --c-line: #E4E0DC;
+  --c-link: #5B2A86;
+  --c-accent: #EE8915;
+  --c-on-accent: #221E1F;
+  --c-brand-2: #5B2A86;
+  --c-on-brand-2: #FFFFFF;
+  --c-header-bg: #221E1F;
+  --c-header-fg: #FFFFFF;
+  --c-header-muted: #E7E2DF;
+  --c-hero-bg: #221E1F;
+  --c-hero-fg: #FFFFFF;
+  --c-hero-muted: #F4F2F0;
+  --c-band-bg: #5B2A86;
+  --c-band-fg: #FFFFFF;
+  --c-label-bg: #5B2A86;
+  --c-label-fg: #FFFFFF;
+  --c-footer-bg: #3B1A5A;
+  --c-footer-fg: #EFE7F6;
+
+  --font-body: var(--font-inter);
+  --font-display: var(--font-condensed);
+  --display-case: uppercase;
+  --display-weight: 800;
+  --display-tracking: 0.01em;
+
+  --radius-card: 0px;
+  --radius-button: 0px;
+  --radius-label: 0px;
+  --skew: 0deg;
+  --tilt: 0deg;
+  --edge-start: 0px;
+  --edge-end: 0px;
+  --card-shadow: none;
+}

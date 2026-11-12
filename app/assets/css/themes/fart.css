@@ -1,0 +1,40 @@
+/* Fart: dark and sporty, slanted edges and speed lines (mockup v2). */
+:root[data-theme="fart"] {
+  --c-bg: #F4F2F0;
+  --c-surface: #FFFFFF;
+  --c-text: #221E1F;
+  --c-muted: #5F5754;
+  --c-line: #E4E0DC;
+  --c-link: #A85400;
+  --c-accent: #EE8915;
+  --c-on-accent: #221E1F;
+  --c-brand-2: #5B2A86;
+  --c-on-brand-2: #FFFFFF;
+  --c-header-bg: #221E1F;
+  --c-header-fg: #FFFFFF;
+  --c-header-muted: #E7E2DF;
+  --c-hero-bg: #221E1F;
+  --c-hero-fg: #FFFFFF;
+  --c-hero-muted: #E7E2DF;
+  --c-band-bg: #221E1F;
+  --c-band-fg: #FFFFFF;
+  --c-label-bg: #EE8915;
+  --c-label-fg: #221E1F;
+  --c-footer-bg: #221E1F;
+  --c-footer-fg: #E7E2DF;
+
+  --font-body: var(--font-inter);
+  --font-display: var(--font-inter);
+  --display-case: none;
+  --display-weight: 900;
+  --display-tracking: -0.03em;
+
+  --radius-card: 12px;
+  --radius-button: 8px;
+  --radius-label: 2px;
+  --skew: -6deg;
+  --tilt: 1.5deg;
+  --edge-start: 0px;
+  --edge-end: 64px;
+  --card-shadow: 0 12px 28px rgb(34 30 31 / 0.18);
+}

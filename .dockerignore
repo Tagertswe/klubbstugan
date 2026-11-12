@@ -1,0 +1,14 @@
+node_modules
+.nuxt
+.output
+coverage
+playwright-report
+test-results
+server/generated
+.git
+.env
+.env.*
+docs
+uploads
+content-packs
+*.zip

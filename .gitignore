@@ -1,0 +1,26 @@
+node_modules
+.nuxt
+.output
+.data
+.nitro
+.cache
+dist
+coverage
+playwright-report
+test-results
+e2e/.auth
+server/generated
+/uploads
+
+# Secrets and local settings
+.env
+.env.*
+!.env.example
+
+*.log
+.DS_Store
+
+# Content packs hold the club's real photos and texts: private, never committed
+# (CLAUDE.md, Content packs). The repo has neutral placeholders only.
+content-packs
+*.zip
