@@ -13,8 +13,8 @@ jobs:
   verify:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
         with:
           node-version: 24
           cache: npm
@@ -44,8 +44,8 @@ jobs:
       DATABASE_URL: postgresql://klubbstugan:klubbstugan@localhost:5432/klubbstugan_e2e
       NUXT_DATABASE_URL: postgresql://klubbstugan:klubbstugan@localhost:5432/klubbstugan_e2e
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
         with:
           node-version: 24
           cache: npm
@@ -54,7 +54,7 @@ jobs:
       - run: npx prisma db seed
       - run: npx playwright install --with-deps chromium webkit
       - run: npm run test:e2e
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v5
         if: failure()
         with:
           name: playwright-report
@@ -64,7 +64,7 @@ jobs:
   docker-smoke-test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - run: docker compose build
       - run: docker compose up -d web
       - name: Wait for the app
